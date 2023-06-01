@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Navbar.master.cs" Inherits="Front_End.View.Navbar" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+                <asp:Button ID="homeBtn" runat="server" Text="Home" />
+                <asp:Button ID="orderRamenBtn" runat="server" Text="Order Ramen" />
+                <asp:Button ID="manageRamenBtn" runat="server" Text="Manage Ramen" />
+                <asp:Button ID="orderQueueBtn" runat="server" Text="Order Queue" />
+                <asp:Button ID="profileBtn" runat="server" Text="Profile" />
+                <asp:Button ID="historyBtn" runat="server" Text="History" />
+                <asp:Button ID="reportBtn" runat="server" Text="Report" />
+                <asp:Button ID="loginBtn" runat="server" Text="Login" />
+                <asp:Button ID="logoutBtn" runat="server" Text="Logout" />
+                <hr />
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
