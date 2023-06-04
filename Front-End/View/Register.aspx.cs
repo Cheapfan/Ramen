@@ -12,7 +12,6 @@ namespace Front_End.View
     public partial class Register : System.Web.UI.Page
     {
         public static WebService webService = new WebService();
-
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -22,18 +21,17 @@ namespace Front_End.View
         {
             string username = txtUsername.Text;
             string email = txtEmail.Text;
+            string password = txtPassword.Text;
+            string confirmPassword = txtConfirmPassword.Text;
             string gender = null;
             if (radioBtnGenderMale.Checked) gender = "Male";
             else if (radioBtnGenderFemale.Checked) gender = "Female";
-            string password = txtPassword.Text;
-            string confirmPassword = txtConfirmPassword.Text;
+            int roleId = 0;
+            if (radioBtnRoleStaff.Checked) roleId = 2;
+            else if (radioBtnRoleMember.Checked) roleId = 3;
 
-            lblErrConfirmPassword.Text = JsonConvert.DeserializeObject<String>(webService.registerMember(username, email, gender, password, confirmPassword));
-        }
+            JsonConvert.DeserializeObject<String>(webService.addUser(username, email, roleId, gender, password, confirmPassword));
 
-        protected void btnLogin_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

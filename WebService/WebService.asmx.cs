@@ -27,7 +27,7 @@ namespace WebService
 
 
         [WebMethod]
-        public String registerMember(string username, string email, int roleId, string gender, string password, string confirmPassword)
+        public String addUser(string username, string email, int roleId, string gender, string password, string confirmPassword)
         {
             return JsonConvert.SerializeObject(UserController.addUser(username, email, roleId, gender, password, confirmPassword));
         }

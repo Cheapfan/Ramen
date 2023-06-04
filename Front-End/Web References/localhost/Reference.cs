@@ -31,7 +31,7 @@ namespace Front_End.localhost {
         
         private System.Threading.SendOrPostCallback HelloWorldOperationCompleted;
         
-        private System.Threading.SendOrPostCallback registerMemberOperationCompleted;
+        private System.Threading.SendOrPostCallback addUserOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -75,7 +75,7 @@ namespace Front_End.localhost {
         public event HelloWorldCompletedEventHandler HelloWorldCompleted;
         
         /// <remarks/>
-        public event registerMemberCompletedEventHandler registerMemberCompleted;
+        public event addUserCompletedEventHandler addUserCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/HelloWorld", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -105,11 +105,12 @@ namespace Front_End.localhost {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/registerMember", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string registerMember(string username, string email, string gender, string password, string confirmPassword) {
-            object[] results = this.Invoke("registerMember", new object[] {
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/addUser", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string addUser(string username, string email, int roleId, string gender, string password, string confirmPassword) {
+            object[] results = this.Invoke("addUser", new object[] {
                         username,
                         email,
+                        roleId,
                         gender,
                         password,
                         confirmPassword});
@@ -117,27 +118,28 @@ namespace Front_End.localhost {
         }
         
         /// <remarks/>
-        public void registerMemberAsync(string username, string email, string gender, string password, string confirmPassword) {
-            this.registerMemberAsync(username, email, gender, password, confirmPassword, null);
+        public void addUserAsync(string username, string email, int roleId, string gender, string password, string confirmPassword) {
+            this.addUserAsync(username, email, roleId, gender, password, confirmPassword, null);
         }
         
         /// <remarks/>
-        public void registerMemberAsync(string username, string email, string gender, string password, string confirmPassword, object userState) {
-            if ((this.registerMemberOperationCompleted == null)) {
-                this.registerMemberOperationCompleted = new System.Threading.SendOrPostCallback(this.OnregisterMemberOperationCompleted);
+        public void addUserAsync(string username, string email, int roleId, string gender, string password, string confirmPassword, object userState) {
+            if ((this.addUserOperationCompleted == null)) {
+                this.addUserOperationCompleted = new System.Threading.SendOrPostCallback(this.OnaddUserOperationCompleted);
             }
-            this.InvokeAsync("registerMember", new object[] {
+            this.InvokeAsync("addUser", new object[] {
                         username,
                         email,
+                        roleId,
                         gender,
                         password,
-                        confirmPassword}, this.registerMemberOperationCompleted, userState);
+                        confirmPassword}, this.addUserOperationCompleted, userState);
         }
         
-        private void OnregisterMemberOperationCompleted(object arg) {
-            if ((this.registerMemberCompleted != null)) {
+        private void OnaddUserOperationCompleted(object arg) {
+            if ((this.addUserCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.registerMemberCompleted(this, new registerMemberCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.addUserCompleted(this, new addUserCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -188,17 +190,17 @@ namespace Front_End.localhost {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    public delegate void registerMemberCompletedEventHandler(object sender, registerMemberCompletedEventArgs e);
+    public delegate void addUserCompletedEventHandler(object sender, addUserCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class registerMemberCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class addUserCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal registerMemberCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal addUserCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }

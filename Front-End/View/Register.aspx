@@ -1,15 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="Front_End.View.Register" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-            <h1>Register</h1>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/View/Navbar.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="Front_End.View.Register" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <h1>Register</h1>
             <br />
 
             <asp:Label ID="lblUsername" runat="server" Text="Username: "></asp:Label>
@@ -43,12 +36,13 @@
             <asp:Label ID="lblErrGender" runat="server" Text="" ForeColor="Red"></asp:Label>
             <br />
 
-            <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" />
+            <asp:Label ID="lblRole" runat="server" Text="Role: "></asp:Label>
+            <asp:RadioButton ID="radioBtnRoleStaff" runat="server" Text="Staff" GroupName="role" />  
+            <asp:RadioButton ID="radioBtnRoleMember" runat="server" Text="member" GroupName="role" />  
+            <br />
+            <asp:Label ID="lblErrRole" runat="server" Text="" ForeColor="Red"></asp:Label>
             <br />
 
-            <br />
-            <asp:Button ID="btnLogin" runat="server" Text="Go to Login" OnClick="btnLogin_Click" />
-        </div>
-    </form>
-</body>
-</html>
+            <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" />
+
+</asp:Content>

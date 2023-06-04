@@ -18,6 +18,7 @@
                 <asp:Button ID="profileBtn" runat="server" Text="Profile" />
                 <asp:Button ID="historyBtn" runat="server" Text="History" />
                 <asp:Button ID="reportBtn" runat="server" Text="Report" />
+                <asp:Button ID="registerBtn" runat="server" Text="Register" />
                 <asp:Button ID="loginBtn" runat="server" Text="Login" />
                 <asp:Button ID="logoutBtn" runat="server" Text="Logout" />
                 <hr />
