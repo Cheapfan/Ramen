@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
+using WebService.Controller;
 
 namespace WebService
 {
@@ -26,9 +27,9 @@ namespace WebService
 
 
         [WebMethod]
-        public String registerMember(string username, string email, string gender, string password, string confirmPassword)
+        public String registerMember(string username, string email, int roleId, string gender, string password, string confirmPassword)
         {
-            return JsonConvert.SerializeObject(username + " with email " + email);
+            return JsonConvert.SerializeObject(UserController.addUser(username, email, roleId, gender, password, confirmPassword));
         }
     }
 }

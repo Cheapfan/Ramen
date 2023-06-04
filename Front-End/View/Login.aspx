@@ -11,15 +11,23 @@
         <div>
             <h1>Login</h1>
             <br />
-            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+            <asp:Label ID="lblUsername" runat="server" Text="Username: "></asp:Label>
+            <asp:TextBox ID="txtUsername" runat="server"></asp:TextBox>
             <br />
-            <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
-            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+            <asp:Label ID="lblErrUsername" runat="server" Text="" ForeColor="Red"></asp:Label>
             <br />
-            <asp:Button ID="Button1" runat="server" Text="Button" />
+
+            <asp:Label ID="lblPassword" runat="server" Text="Label"></asp:Label>
+            <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
             <br />
-            <asp:Button ID="Button2" runat="server" Text="Button" />
+            <asp:Label ID="lblErrPassword" runat="server" Text="" ForeColor="Red"></asp:Label>
+            <br />
+
+            <asp:Button ID="btnLogin" runat="server" Text="Login" />
+            <br />
+            <br />
+            <asp:Button ID="btnLoginAsGuest" runat="server" Text="Login As Guest" />
+            <asp:Button ID="BtnRegister" runat="server" Text="Register" />
         </div>
     </form>
 </body>
