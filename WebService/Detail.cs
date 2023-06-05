@@ -19,6 +19,6 @@ namespace WebService
         public int Quantity { get; set; }
     
         public virtual Header Header { get; set; }
-        public virtual Ramen Ramen { get; set; }
+        public virtual Raman Raman { get; set; }
     }
 }

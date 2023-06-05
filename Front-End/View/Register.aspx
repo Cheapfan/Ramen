@@ -18,13 +18,13 @@
             <br />
 
             <asp:Label ID="lblPassword" runat="server" Text="Password: "></asp:Label>
-            <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
             <br />
             <asp:Label ID="lblErrPassword" runat="server" Text="" ForeColor="Red"></asp:Label>
             <br />
 
             <asp:Label ID="lblConfirmPassword" runat="server" Text="Confirm Password: "></asp:Label>
-            <asp:TextBox ID="txtConfirmPassword" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password"></asp:TextBox>
             <br />
             <asp:Label ID="lblErrConfirmPassword" runat="server" Text="" ForeColor="Red"></asp:Label>
             <br />

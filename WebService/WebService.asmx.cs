@@ -27,9 +27,12 @@ namespace WebService
 
 
         [WebMethod]
-        public String addUser(string username, string email, int roleId, string gender, string password, string confirmPassword)
+        public List<String> addUser(string username, string email, int roleId, string gender, string password, string confirmPassword)
         {
-            return JsonConvert.SerializeObject(UserController.addUser(username, email, roleId, gender, password, confirmPassword));
+            List<String> result = new List<String>(); 
+            result.Add(JsonConvert.SerializeObject(UserController.addUser(username, email, roleId, gender, password, confirmPassword)));
+
+            return result;
         }
     }
 }

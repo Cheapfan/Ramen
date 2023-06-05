@@ -1,4 +1,5 @@
-﻿using Front_End.localhost;
+﻿
+using Front_End.localhost;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -30,8 +31,13 @@ namespace Front_End.View
             if (radioBtnRoleStaff.Checked) roleId = 2;
             else if (radioBtnRoleMember.Checked) roleId = 3;
 
-            JsonConvert.DeserializeObject<String>(webService.addUser(username, email, roleId, gender, password, confirmPassword));
-
+            List<string> output = JsonConvert.DeserializeObject<List<string>>(webService.addUser(username, email, roleId, gender, password, confirmPassword));
+            lblErrUsername.Text = output[0];
+            lblErrEmail.Text = output[1];
+            lblErrRole.Text = output[2];
+            lblErrGender.Text = output[3];
+            lblErrPassword.Text = output[4];
+            lblErrConfirmPassword.Text = output[5];
         }
     }
 }

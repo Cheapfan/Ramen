@@ -8,7 +8,7 @@
         <EntityTypeShape EntityType="WebServiceDatabaseModel.Detail" Width="1.5" PointX="7.5" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="WebServiceDatabaseModel.Header" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="WebServiceDatabaseModel.Meat" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="WebServiceDatabaseModel.Ramen" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebServiceDatabaseModel.Raman" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
         <EntityTypeShape EntityType="WebServiceDatabaseModel.Role" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="WebServiceDatabaseModel.User" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="WebServiceDatabaseModel.FK__Detail__HeaderId__4316F928" ManuallyRouted="false" />

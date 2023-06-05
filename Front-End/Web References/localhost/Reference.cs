@@ -23,7 +23,7 @@ namespace Front_End.localhost {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="WebServiceSoap", Namespace="http://tempuri.org/")]
@@ -123,7 +123,7 @@ namespace Front_End.localhost {
         }
         
         /// <remarks/>
-        public void addUserAsync(string username, string email, int roleId, string gender, string password, string confirmPassword, object userState) {
+        public void addUserAsync(string username, string email,  int roleId, string gender, string password, string confirmPassword, object userState) {
             if ((this.addUserOperationCompleted == null)) {
                 this.addUserOperationCompleted = new System.Threading.SendOrPostCallback(this.OnaddUserOperationCompleted);
             }
@@ -163,11 +163,11 @@ namespace Front_End.localhost {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     public delegate void HelloWorldCompletedEventHandler(object sender, HelloWorldCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class HelloWorldCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -189,11 +189,11 @@ namespace Front_End.localhost {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     public delegate void addUserCompletedEventHandler(object sender, addUserCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class addUserCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {

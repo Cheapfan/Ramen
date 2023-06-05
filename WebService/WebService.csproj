@@ -109,7 +109,7 @@
       <DependentUpon>WebServiceDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Ramen.cs">
+    <Compile Include="Raman.cs">
       <DependentUpon>WebServiceDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Repository\UserRepository.cs" />
