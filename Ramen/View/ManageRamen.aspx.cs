@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ramen.Controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,6 +10,7 @@ namespace Ramen.View
 {
     public partial class ManageRamen : System.Web.UI.Page
     {
+        public List<Raman> ramenlist = null;
         protected void Page_Load(object sender, EventArgs e)
         {
             if(Session["user"] != null)
@@ -23,6 +25,61 @@ namespace Ramen.View
             {
                 Response.Redirect("Home.aspx");
             }
+
+
+            ramenlist = RamenController.getAllRamen();
+
+            if (!IsPostBack) 
+            {
+                BindGridView(); 
+            }
+        }
+
+        private void BindGridView()
+        {
+            ramenlist = RamenController.getAllRamen();
+            GridView.DataSource = ramenlist;
+            GridView.DataBind();
+        }
+
+        protected void GridView_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            int Id = Convert.ToInt32(e.CommandArgument);
+            if (e.CommandName == "Update")
+            {
+                Response.Redirect("UpdateRamen.aspx?id=" + Id);
+            }
+            else if (e.CommandName == "Delete")
+            {
+                RamenController.deleteRamen(Id);
+            }
+            BindGridView();
+
+        }
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        protected void GridView_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+
+        }
+
+        protected void GridView_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            
+        }
+
+        protected void btnInsert_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("InsertRamen.aspx");
         }
     }
 }

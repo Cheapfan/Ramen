@@ -91,6 +91,7 @@
     </Content>
     <Content Include="View\History.aspx" />
     <Content Include="View\Home.aspx" />
+    <Content Include="View\InsertRamen.aspx" />
     <Content Include="View\Login.aspx" />
     <Content Include="View\ManageRamen.aspx" />
     <Content Include="View\OrderQueue.aspx" />
@@ -98,14 +99,20 @@
     <Content Include="View\Profile.aspx" />
     <Content Include="View\Register.aspx" />
     <Content Include="View\Report.aspx" />
+    <Content Include="View\UpdateRamen.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\MeatController.cs" />
+    <Compile Include="Controller\RamenController.cs" />
     <Compile Include="Controller\UserController.cs" />
     <Compile Include="Detail.cs">
       <DependentUpon>LocalDatabaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Factory\RamenFactory.cs" />
     <Compile Include="Factory\UserFactory.cs" />
+    <Compile Include="Handler\MeatHandler.cs" />
+    <Compile Include="Handler\RamenHandler.cs" />
     <Compile Include="Handler\UserHandler.cs" />
     <Compile Include="Header.cs">
       <DependentUpon>LocalDatabaseModel.tt</DependentUpon>
@@ -132,6 +139,8 @@
     <Compile Include="Raman.cs">
       <DependentUpon>LocalDatabaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Repository\MeatRepository.cs" />
+    <Compile Include="Repository\RamenRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
     <Compile Include="Role.cs">
       <DependentUpon>LocalDatabaseModel.tt</DependentUpon>
@@ -152,6 +161,13 @@
     </Compile>
     <Compile Include="View\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\InsertRamen.aspx.cs">
+      <DependentUpon>InsertRamen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\InsertRamen.aspx.designer.cs">
+      <DependentUpon>InsertRamen.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -208,6 +224,13 @@
     </Compile>
     <Compile Include="View\Report.aspx.designer.cs">
       <DependentUpon>Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\UpdateRamen.aspx.cs">
+      <DependentUpon>UpdateRamen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\UpdateRamen.aspx.designer.cs">
+      <DependentUpon>UpdateRamen.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
