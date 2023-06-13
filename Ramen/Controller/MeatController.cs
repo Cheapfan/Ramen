@@ -18,5 +18,9 @@ namespace Ramen.Controller
             return MeatHandler.isMeatExists(id);
         }
 
+        public static string getMeatName(int id)
+        {
+            return MeatHandler.getMeatName(id);
+        }
     }
 }

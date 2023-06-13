@@ -18,6 +18,11 @@ namespace Ramen.Controller
             RamenHandler.deleteRamen(id);
         }
 
+        public static Raman getRamenById(int id)
+        {
+            return RamenHandler.getRamenById(id);
+        }
+
         public static List<string> insertRamen(string name, int meadId, string broth, string price)
         {
             string errMessageName = "";

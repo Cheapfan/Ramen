@@ -21,5 +21,10 @@ namespace Ramen.Handler
             }
             return false;
         }
+
+        public static string getMeatName(int id)
+        {
+            return (MeatRepository.getMeatById(id).Name);
+        }
     }
 }

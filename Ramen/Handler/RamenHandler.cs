@@ -13,6 +13,11 @@ namespace Ramen.Handler
             return RamenRepository.getAllRamen();
         }
 
+        public static Raman getRamenById(int id)
+        {
+            return RamenRepository.getRamenById(id);
+        }
+
         public static void deleteRamen(int id)
         {
             RamenRepository.deleteRamen(id);
@@ -27,5 +32,7 @@ namespace Ramen.Handler
         {
             return RamenRepository.updateRamen(id, name, meatId, broth, price);
         }
+
+
     }
 }

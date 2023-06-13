@@ -15,7 +15,7 @@ namespace Ramen.Repository
 
         public static Meat getMeatById(int id)
         {
-            return (from x in db.Meats select x).FirstOrDefault();
+            return (from x in db.Meats where id == x.Id select x).FirstOrDefault();
         }
     }
 }

@@ -57,6 +57,20 @@ namespace Ramen.View
 
         }
 
+        protected string getMeatName(object MeatId)
+        {
+            if (MeatId != null)
+            {
+                int id;
+                if (int.TryParse(MeatId.ToString(), out id))
+                {
+                    string meatName = MeatController.getMeatName(id);
+                    return meatName;
+                }
+            }
+            return string.Empty;
+        }
+
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
             

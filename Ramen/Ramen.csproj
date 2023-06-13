@@ -99,20 +99,27 @@
     <Content Include="View\Profile.aspx" />
     <Content Include="View\Register.aspx" />
     <Content Include="View\Report.aspx" />
+    <Content Include="View\TransactionDetail.aspx" />
     <Content Include="View\UpdateRamen.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\MeatController.cs" />
     <Compile Include="Controller\RamenController.cs" />
+    <Compile Include="Controller\TransactionDetailController.cs" />
+    <Compile Include="Controller\TransactionHeaderController.cs" />
     <Compile Include="Controller\UserController.cs" />
     <Compile Include="Detail.cs">
       <DependentUpon>LocalDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Factory\RamenFactory.cs" />
+    <Compile Include="Factory\TransactionDetailFactory.cs" />
+    <Compile Include="Factory\TransactionHeaderFactory.cs" />
     <Compile Include="Factory\UserFactory.cs" />
     <Compile Include="Handler\MeatHandler.cs" />
     <Compile Include="Handler\RamenHandler.cs" />
+    <Compile Include="Handler\TransactionHeaderHandler.cs" />
+    <Compile Include="Handler\TransactionDetailHandler.cs" />
     <Compile Include="Handler\UserHandler.cs" />
     <Compile Include="Header.cs">
       <DependentUpon>LocalDatabaseModel.tt</DependentUpon>
@@ -135,12 +142,16 @@
     <Compile Include="Meat.cs">
       <DependentUpon>LocalDatabaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\ItemDetail.cs" />
+    <Compile Include="Model\UnhadledOrder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Raman.cs">
       <DependentUpon>LocalDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Repository\MeatRepository.cs" />
     <Compile Include="Repository\RamenRepository.cs" />
+    <Compile Include="Repository\TransactionDetailRepository.cs" />
+    <Compile Include="Repository\TransactionHeaderRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
     <Compile Include="Role.cs">
       <DependentUpon>LocalDatabaseModel.tt</DependentUpon>
@@ -224,6 +235,13 @@
     </Compile>
     <Compile Include="View\Report.aspx.designer.cs">
       <DependentUpon>Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\TransactionDetail.aspx.cs">
+      <DependentUpon>TransactionDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\TransactionDetail.aspx.designer.cs">
+      <DependentUpon>TransactionDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\UpdateRamen.aspx.cs">
       <DependentUpon>UpdateRamen.aspx</DependentUpon>

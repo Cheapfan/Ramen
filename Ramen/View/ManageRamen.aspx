@@ -11,7 +11,11 @@
         <asp:GridView ID="GridView" runat="server" AutoGenerateColumns="False" OnRowCommand="GridView_RowCommand" OnRowUpdating="GridView_RowUpdating" OnRowDeleting="GridView_RowDeleting" >
             <Columns>
                 <asp:BoundField DataField="Id" HeaderText="Id" ReadOnly="true" />
-                <asp:BoundField DataField="MeatId" HeaderText="Meatid" />
+                <asp:TemplateField HeaderText="Meat">
+                    <ItemTemplate>
+                        <%# getMeatName(Eval("MeatId")) %>
+                    </ItemTemplate>
+                </asp:TemplateField>
                 <asp:BoundField DataField="Name" HeaderText="Name" />
                 <asp:BoundField DataField="Broth" HeaderText="Broth" />
                 <asp:BoundField DataField="Price" HeaderText="Price" />

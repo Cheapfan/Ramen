@@ -3,4 +3,25 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>History</h1>
+    <br />
+    <br />
+    <% if (headerlist != null) 
+        { %>
+        <asp:GridView ID="GridView" runat="server" AutoGenerateColumns="False" OnRowCommand="GridView_RowCommand" >
+            <Columns>
+                <asp:BoundField DataField="Id" HeaderText="Id" />
+                <asp:BoundField DataField="CustomerId" HeaderText="CustomerId" />
+                <asp:BoundField DataField="StaffId" HeaderText="StaffId" />
+                <asp:BoundField DataField="Date" HeaderText="Date" />
+                <asp:TemplateField HeaderText="Detail">
+                    <ItemTemplate>
+                        <asp:Button ID="btnDetail" runat="server" Text="See Detail" CommandName="See Detail" CommandArgument='<%# Eval("Id") %>' OnClick="btnDetail_Click" />
+                    </ItemTemplate>
+                </asp:TemplateField>
+            </Columns>
+        </asp:GridView>
+        <% } 
+    %>
+
+
 </asp:Content>

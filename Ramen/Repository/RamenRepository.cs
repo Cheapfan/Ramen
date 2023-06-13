@@ -16,6 +16,13 @@ namespace Ramen.Repository
             return (from x in db.Ramen select x).ToList();
         }
 
+        public static Raman getRamenById(int id)
+        {
+            return (from x in db.Ramen
+                    where id == x.Id
+                    select x).FirstOrDefault();
+        }
+
         public static void deleteRamen(int id)
         {
             Raman ramen = (from x in db.Ramen
