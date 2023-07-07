@@ -124,3 +124,17 @@ C:\Users\steve\Documents\Binus\Ramen\Ramen\obj\Debug\Ramen.csproj.CoreCompileInp
 C:\Users\steve\Documents\Binus\Ramen\Ramen\obj\Debug\Ramen.csproj.CopyComplete
 C:\Users\steve\Documents\Binus\Ramen\Ramen\obj\Debug\Ramen.dll
 C:\Users\steve\Documents\Binus\Ramen\Ramen\obj\Debug\Ramen.pdb
+C:\Users\steve\Documents\Binus\Semester4\Pattern Software Design\Lab\Ramen\Ramen\bin\Ramen.dll.config
+C:\Users\steve\Documents\Binus\Semester4\Pattern Software Design\Lab\Ramen\Ramen\bin\Ramen.dll
+C:\Users\steve\Documents\Binus\Semester4\Pattern Software Design\Lab\Ramen\Ramen\bin\Ramen.pdb
+C:\Users\steve\Documents\Binus\Semester4\Pattern Software Design\Lab\Ramen\Ramen\bin\EntityFramework.dll
+C:\Users\steve\Documents\Binus\Semester4\Pattern Software Design\Lab\Ramen\Ramen\bin\EntityFramework.SqlServer.dll
+C:\Users\steve\Documents\Binus\Semester4\Pattern Software Design\Lab\Ramen\Ramen\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\steve\Documents\Binus\Semester4\Pattern Software Design\Lab\Ramen\Ramen\bin\EntityFramework.xml
+C:\Users\steve\Documents\Binus\Semester4\Pattern Software Design\Lab\Ramen\Ramen\bin\EntityFramework.SqlServer.xml
+C:\Users\steve\Documents\Binus\Semester4\Pattern Software Design\Lab\Ramen\Ramen\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\steve\Documents\Binus\Semester4\Pattern Software Design\Lab\Ramen\Ramen\obj\Debug\Ramen.csproj.AssemblyReference.cache
+C:\Users\steve\Documents\Binus\Semester4\Pattern Software Design\Lab\Ramen\Ramen\obj\Debug\Ramen.csproj.CoreCompileInputs.cache
+C:\Users\steve\Documents\Binus\Semester4\Pattern Software Design\Lab\Ramen\Ramen\obj\Debug\Ramen.csproj.CopyComplete
+C:\Users\steve\Documents\Binus\Semester4\Pattern Software Design\Lab\Ramen\Ramen\obj\Debug\Ramen.dll
+C:\Users\steve\Documents\Binus\Semester4\Pattern Software Design\Lab\Ramen\Ramen\obj\Debug\Ramen.pdb
