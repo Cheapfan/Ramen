@@ -17,9 +17,20 @@ namespace Ramen.View
             {
                  Response.Redirect("Home.aspx");
             }
-            user = (User)Session["user"];
-            
+            if (!IsPostBack)
+            {
+                BindGridView();
+            }
         }
+
+        protected void BindGridView()
+        {
+            user = (User)Session["user"];
+            List<User> showUser = new List<User> { user };
+            GridViewProfile.DataSource = showUser;
+            GridViewProfile.DataBind();
+        }
+
 
         protected void btnChangeProfileInformation_Click(object sender, EventArgs e)
         {
@@ -36,6 +47,7 @@ namespace Ramen.View
             lblErrEmail.Text = output[1];
             lblErrGender.Text = output[2];
             lblErrPassword.Text = output[3];
+            BindGridView(); 
         }
     }
   

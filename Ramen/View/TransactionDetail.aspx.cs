@@ -16,7 +16,7 @@ namespace Ramen.View
             if (Session["user"] != null)
             {
                 User user = (User)Session["user"];
-                if (user.RoleId != 3)
+                if (user.RoleId != 3 && user.RoleId != 1)
                 {
                     Response.Redirect("Home.aspx");
                 }

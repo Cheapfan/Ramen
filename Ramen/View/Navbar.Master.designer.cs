@@ -60,13 +60,13 @@ namespace Ramen.View
         protected global::System.Web.UI.WebControls.Button manageRamenBtn;
 
         /// <summary>
-        /// orderQueueBtn control.
+        /// transactionQueueBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button orderQueueBtn;
+        protected global::System.Web.UI.WebControls.Button transactionQueueBtn;
 
         /// <summary>
         /// profileBtn control.

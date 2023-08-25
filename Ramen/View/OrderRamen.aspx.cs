@@ -1,4 +1,6 @@
-﻿using Ramen.Controller;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
+using Ramen.Controller;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -126,16 +128,26 @@ namespace Ramen.View
         protected void btnPurchase_Click(object sender, EventArgs e)
         {
             CartItems = (List<CartItem>)Session["CartItems"];
+            
             User user = (User)Session["user"];
             int customerId = user.Id;
             DateTime currentDate = DateTime.Today;
-            //TransactionHeaderController.insertHeader(CartItems, customerId, currentDate);
-            Session["UnhadledTransaction"] = CartItems;
+            Session.Remove("CartItems");
+            int headerId = TransactionHeaderController.insertHeader(customerId, currentDate);
+            foreach (CartItem cartItem in CartItems)
+            {
+                int ramenId = cartItem.Ramen.Id;
+                int quantity = cartItem.Quantity;
+                TransactionDetailController.insertDetail(headerId, ramenId, quantity);
+            }
+            CartItems = null;
+            BindGridViewCart();
         }
 
         protected void btnClearCart_Click(object sender, EventArgs e)
         {
             Session.Remove("CartItems");
+            CartItems = null;
             BindGridViewCart();
         }
     }

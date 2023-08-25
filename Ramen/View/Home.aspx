@@ -6,26 +6,13 @@
     <asp:Label ID="lblRole" runat="server" Text=""></asp:Label>
     <br />
     <br />
-    <% if (userlist != null) 
-    { %>
-        <table>
-            <tr>
-                <td>Id</td>
-                <td>Username</td>
-                <td>Email</td>
-                <td>Gender</td>
-                <td>Password</td>
-            </tr>
-            <% foreach (var tran in userlist) { %>
-                <tr>
-                    <td><%: tran.Id %></td>
-                    <td><%: tran.Username %></td>
-                    <td><%: tran.Email %></td>
-                    <td><%: tran.Gender %></td>
-                    <td><%: tran.Password %></td>
-                </tr>
-            <% } %>
-        </table>
-    <% } 
-    %>
+    <asp:GridView ID="GridViewUsers" runat="server" AutoGenerateColumns="False">
+        <Columns>
+            <asp:BoundField DataField="Id" HeaderText="Id" />
+            <asp:BoundField DataField="Username" HeaderText="Username" />
+            <asp:BoundField DataField="Email" HeaderText="Email" />
+            <asp:BoundField DataField="Gender" HeaderText="Gender" />
+            <asp:BoundField DataField="Password" HeaderText="Password" />
+        </Columns>
+    </asp:GridView>
 </asp:Content>

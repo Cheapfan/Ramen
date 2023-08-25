@@ -2,14 +2,14 @@
 <Schema Namespace="LocalDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="Detail">
     <Key>
-      <PropertyRef Name="HeaderId" />
-      <PropertyRef Name="RamenId" />
+      <PropertyRef Name="Headerid" />
+      <PropertyRef Name="Ramenid" />
     </Key>
-    <Property Name="HeaderId" Type="Int32" Nullable="false" />
-    <Property Name="RamenId" Type="Int32" Nullable="false" />
+    <Property Name="Headerid" Type="Int32" Nullable="false" />
+    <Property Name="Ramenid" Type="Int32" Nullable="false" />
     <Property Name="Quantity" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Header" Relationship="Self.FK__Detail__HeaderId__300424B4" FromRole="Detail" ToRole="Header" />
-    <NavigationProperty Name="Raman" Relationship="Self.FK__Detail__RamenId__30F848ED" FromRole="Detail" ToRole="Ramen" />
+    <NavigationProperty Name="Header" Relationship="Self.FK__Detail__Headerid__398D8EEE" FromRole="Detail" ToRole="Header" />
+    <NavigationProperty Name="Raman" Relationship="Self.FK__Detail__Ramenid__3A81B327" FromRole="Detail" ToRole="Ramen" />
   </EntityType>
   <EntityType Name="Header">
     <Key>
@@ -17,10 +17,10 @@
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="CustomerId" Type="Int32" Nullable="false" />
-    <Property Name="StaffId" Type="Int32" Nullable="false" />
-    <Property Name="Date" Type="DateTime" Precision="0" />
-    <NavigationProperty Name="Details" Relationship="Self.FK__Detail__HeaderId__300424B4" FromRole="Header" ToRole="Detail" />
-    <NavigationProperty Name="User" Relationship="Self.FK__Header__Customer__2A4B4B5E" FromRole="Header" ToRole="User" />
+    <Property Name="StaffId" Type="Int32" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Details" Relationship="Self.FK__Detail__Headerid__398D8EEE" FromRole="Header" ToRole="Detail" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Header__Customer__36B12243" FromRole="Header" ToRole="User" />
   </EntityType>
   <EntityType Name="Meat">
     <Key>
@@ -39,7 +39,7 @@
     <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Broth" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Price" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="Details" Relationship="Self.FK__Detail__RamenId__30F848ED" FromRole="Ramen" ToRole="Detail" />
+    <NavigationProperty Name="Details" Relationship="Self.FK__Detail__Ramenid__3A81B327" FromRole="Ramen" ToRole="Detail" />
     <NavigationProperty Name="Meat" Relationship="Self.FK__Ramen__MeatId__2D27B809" FromRole="Ramen" ToRole="Meat" />
   </EntityType>
   <EntityType Name="Role">
@@ -60,10 +60,10 @@
     <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="Headers" Relationship="Self.FK__Header__Customer__2A4B4B5E" FromRole="User" ToRole="Header" />
+    <NavigationProperty Name="Headers" Relationship="Self.FK__Header__Customer__36B12243" FromRole="User" ToRole="Header" />
     <NavigationProperty Name="Role" Relationship="Self.FK__User__RoleId__25869641" FromRole="User" ToRole="Role" />
   </EntityType>
-  <Association Name="FK__Detail__HeaderId__300424B4">
+  <Association Name="FK__Detail__Headerid__398D8EEE">
     <End Role="Header" Type="Self.Header" Multiplicity="1" />
     <End Role="Detail" Type="Self.Detail" Multiplicity="*" />
     <ReferentialConstraint>
@@ -71,11 +71,11 @@
         <PropertyRef Name="Id" />
       </Principal>
       <Dependent Role="Detail">
-        <PropertyRef Name="HeaderId" />
+        <PropertyRef Name="Headerid" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Detail__RamenId__30F848ED">
+  <Association Name="FK__Detail__Ramenid__3A81B327">
     <End Role="Ramen" Type="Self.Raman" Multiplicity="1" />
     <End Role="Detail" Type="Self.Detail" Multiplicity="*" />
     <ReferentialConstraint>
@@ -83,11 +83,11 @@
         <PropertyRef Name="Id" />
       </Principal>
       <Dependent Role="Detail">
-        <PropertyRef Name="RamenId" />
+        <PropertyRef Name="Ramenid" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Header__Customer__2A4B4B5E">
+  <Association Name="FK__Header__Customer__36B12243">
     <End Role="User" Type="Self.User" Multiplicity="1" />
     <End Role="Header" Type="Self.Header" Multiplicity="*" />
     <ReferentialConstraint>
@@ -130,15 +130,15 @@
     <EntitySet Name="Ramen" EntityType="Self.Raman" />
     <EntitySet Name="Roles" EntityType="Self.Role" />
     <EntitySet Name="Users" EntityType="Self.User" />
-    <AssociationSet Name="FK__Detail__HeaderId__300424B4" Association="Self.FK__Detail__HeaderId__300424B4">
+    <AssociationSet Name="FK__Detail__Headerid__398D8EEE" Association="Self.FK__Detail__Headerid__398D8EEE">
       <End Role="Header" EntitySet="Headers" />
       <End Role="Detail" EntitySet="Details" />
     </AssociationSet>
-    <AssociationSet Name="FK__Detail__RamenId__30F848ED" Association="Self.FK__Detail__RamenId__30F848ED">
+    <AssociationSet Name="FK__Detail__Ramenid__3A81B327" Association="Self.FK__Detail__Ramenid__3A81B327">
       <End Role="Ramen" EntitySet="Ramen" />
       <End Role="Detail" EntitySet="Details" />
     </AssociationSet>
-    <AssociationSet Name="FK__Header__Customer__2A4B4B5E" Association="Self.FK__Header__Customer__2A4B4B5E">
+    <AssociationSet Name="FK__Header__Customer__36B12243" Association="Self.FK__Header__Customer__36B12243">
       <End Role="User" EntitySet="Users" />
       <End Role="Header" EntitySet="Headers" />
     </AssociationSet>

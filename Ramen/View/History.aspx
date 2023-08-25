@@ -12,6 +12,11 @@
                 <asp:BoundField DataField="Id" HeaderText="Id" />
                 <asp:BoundField DataField="CustomerId" HeaderText="CustomerId" />
                 <asp:BoundField DataField="StaffId" HeaderText="StaffId" />
+                <asp:TemplateField HeaderText="Handled">
+                    <ItemTemplate>
+                        <asp:Label ID="lblHandled" runat="server" Text='<%# Convert.ToInt32(Eval("StaffId")) == 0 ? "not yet" : "done" %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
                 <asp:BoundField DataField="Date" HeaderText="Date" />
                 <asp:TemplateField HeaderText="Detail">
                     <ItemTemplate>

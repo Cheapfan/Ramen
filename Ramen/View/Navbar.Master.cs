@@ -14,7 +14,7 @@ namespace Ramen.View
         {
             orderRamenBtn.Visible = false;
             manageRamenBtn.Visible = false;
-            orderQueueBtn.Visible = false;
+            transactionQueueBtn.Visible = false;
             profileBtn.Visible = false;
             historyBtn.Visible = false;
             reportBtn.Visible = false;
@@ -43,7 +43,7 @@ namespace Ramen.View
                     if (user.RoleId == 1)
                     {
                         manageRamenBtn.Visible = true;
-                        orderQueueBtn.Visible = true;
+                        transactionQueueBtn.Visible = true;
                         profileBtn.Visible = true;
                         historyBtn.Visible = true;
                         reportBtn.Visible = true;
@@ -52,7 +52,7 @@ namespace Ramen.View
                     else if (user.RoleId == 2)
                     {
                         manageRamenBtn.Visible = true;
-                        orderQueueBtn.Visible = true;
+                        transactionQueueBtn.Visible = true;
                         profileBtn.Visible = true;
                     }
                     else if (user.RoleId == 3)
@@ -83,9 +83,9 @@ namespace Ramen.View
             Response.Redirect("ManageRamen.aspx");
         }
 
-        protected void orderQueueBtn_Click(object sender, EventArgs e)
+        protected void transactionQueueBtn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("OrderQueue.aspx");
+            Response.Redirect("TransactionQueue.aspx");
         }
 
         protected void profileBtn_Click(object sender, EventArgs e)

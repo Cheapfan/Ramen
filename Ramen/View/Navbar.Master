@@ -14,7 +14,7 @@
                 <asp:Button ID="homeBtn" runat="server" Text="Home" OnClick="homeBtn_Click" />
                 <asp:Button ID="orderRamenBtn" runat="server" Text="Order Ramen" OnClick="orderRamenBtn_Click" />
                 <asp:Button ID="manageRamenBtn" runat="server" Text="Manage Ramen" OnClick="manageRamenBtn_Click" />
-                <asp:Button ID="orderQueueBtn" runat="server" Text="Order Queue" OnClick="orderQueueBtn_Click" />
+                <asp:Button ID="transactionQueueBtn" runat="server" Text="Transaction Queue" OnClick="transactionQueueBtn_Click" />
                 <asp:Button ID="profileBtn" runat="server" Text="Profile" OnClick="profileBtn_Click" />
                 <asp:Button ID="historyBtn" runat="server" Text="History" OnClick="historyBtn_Click" />
                 <asp:Button ID="reportBtn" runat="server" Text="Report" OnClick="reportBtn_Click" />

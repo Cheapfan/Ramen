@@ -22,8 +22,8 @@ namespace Ramen
     
         public int Id { get; set; }
         public int CustomerId { get; set; }
-        public int StaffId { get; set; }
-        public Nullable<System.DateTime> Date { get; set; }
+        public Nullable<int> StaffId { get; set; }
+        public System.DateTime Date { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Detail> Details { get; set; }

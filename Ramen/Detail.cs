@@ -14,8 +14,8 @@ namespace Ramen
     
     public partial class Detail
     {
-        public int HeaderId { get; set; }
-        public int RamenId { get; set; }
+        public int Headerid { get; set; }
+        public int Ramenid { get; set; }
         public int Quantity { get; set; }
     
         public virtual Header Header { get; set; }

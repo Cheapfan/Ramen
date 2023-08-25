@@ -16,12 +16,19 @@ namespace Ramen.View
             if (Session["user"] != null)
             {
                 User user = (User)Session["user"];
-                if (user.RoleId != 3)
+                if (user.RoleId != 3 && user.RoleId != 1)
                 {
                     Response.Redirect("Home.aspx");
                 }
-
-                headerlist = TransactionHeaderController.getHeaderByCustomerId(user.Id);
+                if(user.RoleId == 1)
+                {
+                    headerlist = TransactionHeaderController.getAllHeader();
+                }
+                else if (user.RoleId == 3)
+                {
+                    headerlist = TransactionHeaderController.getHeaderByCustomerId(user.Id);
+                }
+                
             }
             else
             {
@@ -52,5 +59,6 @@ namespace Ramen.View
         {
 
         }
+
     }
 }

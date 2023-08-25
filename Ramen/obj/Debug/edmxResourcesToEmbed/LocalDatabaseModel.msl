@@ -4,8 +4,8 @@
     <EntitySetMapping Name="Details">
       <EntityTypeMapping TypeName="LocalDatabaseModel.Detail">
         <MappingFragment StoreEntitySet="Detail">
-          <ScalarProperty Name="HeaderId" ColumnName="HeaderId" />
-          <ScalarProperty Name="RamenId" ColumnName="RamenId" />
+          <ScalarProperty Name="Headerid" ColumnName="Headerid" />
+          <ScalarProperty Name="Ramenid" ColumnName="Ramenid" />
           <ScalarProperty Name="Quantity" ColumnName="Quantity" />
         </MappingFragment>
       </EntityTypeMapping>

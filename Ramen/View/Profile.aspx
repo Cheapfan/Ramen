@@ -5,22 +5,17 @@
     <h1>Profile</h1>
     <br />
 
-    <table>
-    <tr>
-        <td>Id</td>
-        <td>Username</td>
-        <td>Email</td>
-        <td>Gender</td>
-        <td>Password</td>
-    </tr>
-    <tr>
-        <td><%: user.Id %></td>
-        <td><%: user.Username %></td>
-        <td><%: user.Email %></td>
-        <td><%: user.Gender %></td>
-        <td><%: user.Password %></td>
-    </tr>
-    </table>
+    <asp:GridView ID="GridViewProfile" runat="server" AutoGenerateColumns="False">
+        <Columns>
+            <asp:BoundField DataField="Id" HeaderText="Id" />
+            <asp:BoundField DataField="Username" HeaderText="Username" />
+            <asp:BoundField DataField="Email" HeaderText="Email" />
+            <asp:BoundField DataField="Gender" HeaderText="Gender" />
+            <asp:BoundField DataField="Password" HeaderText="Password" />
+        </Columns>
+    </asp:GridView>
+    <br />
+    <br />
 
     <asp:Label ID="lblUsername" runat="server" Text="Username: "></asp:Label>
     <asp:TextBox ID="txtUsername" runat="server"></asp:TextBox>

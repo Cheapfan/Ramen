@@ -37,6 +37,8 @@ namespace Ramen.View
                 role = "guest";
             }
             lblRole.Text = role;
+            GridViewUsers.DataSource = userlist;
+            GridViewUsers.DataBind();
         }
     }
 }
